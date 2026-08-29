@@ -50,6 +50,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Deploying needs Pages switched on once in repo Settings (Source =
+    # GitHub Actions). Until that happens deploy-pages fails, which would
+    # redden the whole workflow even though the build and tests passed.
+    # The build job is the real signal, so a missing repo setting is not
+    # allowed to mark the run failed.
+    continue-on-error: true
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
