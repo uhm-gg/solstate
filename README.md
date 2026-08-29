@@ -49,8 +49,9 @@ rather than the ~25 it would take in sequence.
 | Source | Used for | Endpoints |
 |---|---|---|
 | **Solana JSON-RPC** | network, validators, supply | `getEpochInfo`, `getRecentPerformanceSamples`, `getVoteAccounts`, `getSupply`, `getInflationRate`, `getHealth`, `getVersion` |
-| **DefiLlama** | TVL, stablecoins, DEX volume, REV | `historicalChainTvl`, `protocols`, `stablecoincharts`, `overview/dexs`, `overview/fees` |
+| **DefiLlama** | TVL, stablecoins, DEX volume, REV, RWA | `historicalChainTvl`, `protocols`, `stablecoincharts`, `overview/dexs`, `overview/fees` |
 | **CoinGecko** | price, market cap, FDV, ATH | `coins/solana` |
+| **Official RSS** | ecosystem news & announcements | `solana.com/news/rss.xml` |
 
 **Resilience is designed in, not bolted on:**
 
@@ -103,6 +104,16 @@ base fee per signature, inflation, and the implied nominal staking yield.
 with history, DEX volume, top protocols by TVL, TVL by category, and
 volume/TVL turnover.
 
+**Tokenised real-world assets** — total RWA on Solana split by what the token
+actually represents: tokenised equities, treasuries & credit, and commodities.
+DefiLlama files all of these under one `RWA` label, but a tokenised S&P share
+and a tokenised T-bill are different instruments, and the split is the part
+people actually want. Currently ~$2.07B total, of which ~$458M is equities.
+
+**Ecosystem news** — latest posts from official project RSS feeds, parsed with
+`xml.etree`. Twitter is deliberately not used: its API needs a paid key and
+scraping it is brittle and against terms.
+
 **Cross-source metrics** that no single API returns — computed in
 `collect.derive()`:
 
@@ -137,6 +148,18 @@ stored snapshots (z-score > 3.0), covering TPS, slot time, price, TVL, fees and
 DEX volume. The baseline **excludes the current reading**, so a bad value cannot
 dampen the baseline it is being tested against.
 
+A z-score alone is not enough, and this was found the hard way. Sampling every
+10 minutes means most metrics barely move between reads, so the standard
+deviation collapses and a **0.2% wobble in slot time scored z = −18 and was
+reported as CRITICAL**. Statistical significance is not the same as mattering.
+Three guards fix it, and an alert now requires all of them:
+
+| Guard | Default | Why |
+|---|---:|---|
+| `min_baseline_n` | 20 | too few samples is not a baseline |
+| `min_deviation_pct` | 8% | the move must also be materially large |
+| `min_cv` | 0.002 | a near-constant series makes z meaningless |
+
 Every threshold is overridable in `config.json`. Alerts are de-duplicated per
 metric, keeping the most severe.
 
@@ -145,12 +168,13 @@ metric, keeping the most severe.
 
 ```bash
 $ python tests/test_anomaly.py
-13 passed, 0 failed
+16 passed, 0 failed
 ```
 
 The suite asserts that throughput collapse, slow slots, mass delinquency, an
-unhealthy RPC and large price/TVL moves are all caught, that a healthy chain
-stays silent, and that baseline hygiene holds.
+unhealthy RPC and large price/TVL moves are all caught; that a healthy chain
+stays silent; that the 0.2% false positive above stays silent while a genuine
+70% collapse still fires; and that baseline hygiene holds.
 
 ---
 
@@ -234,3 +258,16 @@ out/                        generated artefacts
 ```
 
 Requires Python 3.8+. Nothing else.
+
+---
+
+## What this deliberately does not report
+
+The brief lists daily active addresses. There is no keyless public endpoint
+that exposes them: it needs an indexer (Dune, Helius, Flipside), all of which
+require an API key. Rather than approximate it badly and present the guess as
+a metric, it is omitted and named here.
+
+Similarly, the per-transaction fee figure is reported as an **average**, never
+a median — see the fee note above. Where a number cannot be sourced honestly,
+this tool says so instead of filling the gap.

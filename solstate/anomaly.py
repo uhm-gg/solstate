@@ -27,6 +27,13 @@ DEFAULT_RULES = {
     "stablecoin_move_pct": 5.0,    # 1d
     "nakamoto_drop": 3,            # absolute drop vs baseline
     "zscore": 3.0,
+    # Statistical significance is not the same as mattering. A metric sampled
+    # every 10 minutes barely moves between reads, so its standard deviation
+    # collapses and a 0.2% wobble scores z=-18. Three guards keep the detector
+    # from crying wolf:
+    "min_baseline_n": 20,          # too few samples => no trustworthy baseline
+    "min_deviation_pct": 8.0,      # must ALSO be a materially large move
+    "min_cv": 0.002,               # near-constant series => z is meaningless
 }
 
 
@@ -88,11 +95,23 @@ def detect(snap, store, rules=None):
         series = store.series(name, 2)
         if not base or not series or base["stdev"] <= 0:
             continue
+        # Not enough history to know what "normal" looks like yet.
+        if base["n"] < r["min_baseline_n"]:
+            continue
+        # Near-constant series: stdev is so small relative to the level that a
+        # z-score measures sampling noise, not a real move.
+        if base["mean"] and (base["stdev"] / abs(base["mean"])) < r["min_cv"]:
+            continue
+
         cur = series[-1][1]
         z = (cur - base["mean"]) / base["stdev"]
-        if abs(z) < r["zscore"]:
-            continue
         pct = (cur - base["mean"]) / base["mean"] * 100 if base["mean"] else 0
+        # Both tests must pass: statistically unusual AND actually large.
+        # Either alone produces noise -- z alone flagged a 0.2% wobble as
+        # critical during development.
+        if abs(z) < r["zscore"] or abs(pct) < r["min_deviation_pct"]:
+            continue
+
         sev = "critical" if abs(z) > r["zscore"] * 1.8 else "warning"
         direction = "above" if z > 0 else "below"
         out.append(_a(name, sev,

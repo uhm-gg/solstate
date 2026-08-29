@@ -187,6 +187,34 @@ def render(snap, anomalies=None):
             f"{c['category']} {_usd(c['tvl_usd'])}" for c in cats))
         A("")
 
+    # ------------------------------------------------------------------- rwa
+    rwa = snap.get("rwa") or {}
+    if rwa.get("total_usd"):
+        A("## Tokenised real-world assets")
+        A("")
+        A(f"- Total RWA on Solana: **{_usd(rwa['total_usd'])}** across "
+          f"{_n(rwa.get('count'))} issuers")
+        A(f"- Of which **tokenised equities: {_usd(rwa.get('equities_usd'))}**")
+        A("")
+        for k in rwa.get("by_kind", []):
+            A(f"  - {k['kind']}: {_usd(k['tvl_usd'])}")
+        A("")
+        A("| Issuer | Type | TVL | 24h |")
+        A("|---|---|---:|---:|")
+        for i in rwa.get("top", [])[:8]:
+            A(f"| {i['name']} | {i['kind']} | {_usd(i['tvl_usd'])} | "
+              f"{_pct(i.get('change_1d_pct'),2)} |")
+        A("")
+
+    # ------------------------------------------------------------------ news
+    items = (snap.get("news") or {}).get("items") or []
+    if items:
+        A("## Ecosystem news")
+        A("")
+        for i in items:
+            A(f"- [{i['title']}]({i['link']}) — *{i['source']}, {i['age']}*")
+        A("")
+
     # -------------------------------------------------------------- upgrades
     A("## Upcoming upgrades & developments")
     A("")

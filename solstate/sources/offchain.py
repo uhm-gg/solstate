@@ -80,6 +80,55 @@ def protocols(top_n=15):
     }
 
 
+# ------------------------------------------------------- tokenised RWA
+# Sub-classified by what the token actually represents. DefiLlama lumps all of
+# this under one "RWA" category, but tokenised equities and tokenised treasury
+# bills are very different instruments and the distinction is what people
+# actually want to see.
+_RWA_EQUITIES = ("xstocks", "ondo global markets", "backed", "swarm", "dinari")
+_RWA_TREASURY = ("buidl", "ondo yield", "vaneck", "invesco", "ustb", "superstate",
+                 "thbill", "apollo", "hastra", "franklin", "treasury", "benji")
+_RWA_COMMODITY = ("xaum", "matrixdock", "oro", "paxg", "gold", "tether gold")
+
+
+def _rwa_kind(name):
+    n = (name or "").lower()
+    for kws, kind in ((_RWA_EQUITIES, "Tokenised equities"),
+                      (_RWA_TREASURY, "Treasuries & credit"),
+                      (_RWA_COMMODITY, "Commodities")):
+        if any(k in n for k in kws):
+            return kind
+    return "Other RWA"
+
+
+def rwa(top_n=12):
+    """Tokenised real-world assets on Solana, split by instrument type."""
+    data = _get("https://api.llama.fi/protocols")
+    items = []
+    for p in data:
+        v = (p.get("chainTvls") or {}).get(CHAIN)
+        if not v or v < 500_000 or p.get("category") != "RWA":
+            continue
+        items.append({
+            "name": p.get("name"), "tvl_usd": v,
+            "kind": _rwa_kind(p.get("name")),
+            "change_1d_pct": p.get("change_1d") or 0,
+            "change_7d_pct": p.get("change_7d") or 0,
+        })
+    items.sort(key=lambda x: -x["tvl_usd"])
+    by_kind = {}
+    for i in items:
+        by_kind[i["kind"]] = by_kind.get(i["kind"], 0.0) + i["tvl_usd"]
+    return {
+        "total_usd": sum(i["tvl_usd"] for i in items),
+        "count": len(items),
+        "top": items[:top_n],
+        "by_kind": sorted(({"kind": k, "tvl_usd": v} for k, v in by_kind.items()),
+                          key=lambda x: -x["tvl_usd"]),
+        "equities_usd": by_kind.get("Tokenised equities", 0.0),
+    }
+
+
 # -------------------------------------------------------------- stablecoins
 def stablecoins():
     """Stablecoin float on Solana.
@@ -185,7 +234,7 @@ def price_fallback():
 # ------------------------------------------------------------------ collect
 COLLECTORS = {
     "tvl": tvl, "protocols": protocols, "stablecoins": stablecoins,
-    "dex_volume": dex_volume, "fees": fees, "price": price,
+    "dex_volume": dex_volume, "fees": fees, "price": price, "rwa": rwa,
 }
 
 

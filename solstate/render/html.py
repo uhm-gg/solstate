@@ -89,6 +89,7 @@ def render(snap, history=None, anomalies=None, refresh_seconds=0):
     fees = snap.get("fees") or {}
     prot = snap.get("protocols") or {}
     der = snap.get("derived") or {}
+    rwa = snap.get("rwa") or {}
     meta = snap.get("meta") or {}
 
     sev_counts = {}
@@ -162,6 +163,13 @@ def render(snap, history=None, anomalies=None, refresh_seconds=0):
         f'<div class="ref">{_e(u["impact"])} · {_e(u["reference"])}</div></div>'
         for u in snap.get("upgrades", []))
 
+    news_items = (snap.get("news") or {}).get("items") or []
+    news_html = "".join(
+        f'<div class="news"><a href="{_e(i["link"])}" target="_blank" rel="noopener">'
+        f'{_e(i["title"])}</a>'
+        f'<div class="ref">{_e(i["source"])} · {_e(i["age"])}</div></div>'
+        for i in news_items) or '<div class="empty">no items</div>'
+
     errs = meta.get("errors") or {}
     err_html = ""
     if errs:
@@ -216,7 +224,12 @@ def render(snap, history=None, anomalies=None, refresh_seconds=0):
         fee_bars=_bar_rows(fees.get("top") or [], "name", "total_24h", limit=8),
         protocol_count=_n(prot.get("count")),
         cex_excluded=_usd(prot.get("excluded_cex_usd")),
-        upgrades=up_html, errors=err_html,
+        upgrades=up_html, errors=err_html, news=news_html,
+        rwa_total=_usd(rwa.get("total_usd")),
+        rwa_equities=_usd(rwa.get("equities_usd")),
+        rwa_count=_n(rwa.get("count")),
+        rwa_kind_bars=_bar_rows(rwa.get("by_kind") or [], "kind", "tvl_usd", limit=6),
+        rwa_bars=_bar_rows(rwa.get("top") or [], "name", "tvl_usd", limit=8),
         tvl_chart=_sparkline([h["tvl"] for h in (tvl.get("history") or [])],
                              w=680, h=90, stroke="#14f195"),
         stab_chart=_sparkline([h["total"] for h in (stab.get("history") or [])],
@@ -300,6 +313,10 @@ border-radius:99px;font-weight:700;flex-shrink:0;border:1px solid}}
 background:rgba(153,69,255,.1);padding:1px 7px;border-radius:99px}}
 .ref{{color:#5e6b7c;font-size:11px;margin-top:3px;font-family:ui-monospace,monospace}}
 .empty{{color:var(--dim);font-size:12.5px;padding:8px 0}}
+.news{{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.045)}}
+.news:last-child{{border-bottom:0}}
+.news a{{color:#c6d2e0;text-decoration:none;font-weight:500;font-size:13px}}
+.news a:hover{{color:var(--cy)}}
 footer{{margin-top:26px;color:var(--dim);font-size:11.5px;text-align:center;line-height:1.9}}
 @media(max-width:640px){{.tv{{font-size:22px}}.bar{{grid-template-columns:96px 1fr 74px}}}}
 </style></head><body><div class="wrap">
@@ -377,6 +394,14 @@ footer{{margin-top:26px;color:var(--dim);font-size:11.5px;text-align:center;line
     <table><tr><th>vote account</th><th class="r">stake</th></tr>{delinquent}</table>
   </div>
 
+  <div class="card"><h2>Tokenised real-world assets</h2>
+    <div class="kv"><span>Total RWA on Solana</span><b>{rwa_total}</b></div>
+    <div class="kv"><span>of which tokenised equities</span><b>{rwa_equities}</b></div>
+    <div class="kv"><span>Issuers tracked</span><b>{rwa_count}</b></div>
+    <div style="margin-top:10px">{rwa_kind_bars}</div>
+  </div>
+  <div class="card"><h2>Largest RWA issuers</h2>{rwa_bars}</div>
+  <div class="card"><h2>Ecosystem news</h2>{news}</div>
   <div class="card"><h2>Upcoming upgrades</h2>{upgrades}</div>
   {errors}
 </div>

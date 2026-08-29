@@ -119,6 +119,51 @@ st2.save(normal)
 a = anomaly.detect(normal, st2)
 check("stable history still yields no alerts", len(a) == 0, f"got {metrics(a)}")
 
+print("\n=== false-positive guards (regression) ===")
+
+# A 10-minute sampling cadence means metrics barely move between reads, so
+# stdev collapses and a trivial wobble scores a huge z. During development this
+# reported a 0.2% slot-time change as CRITICAL (z=-18.4). It must stay silent.
+st4 = fresh_store()
+for i in range(40):
+    s = base_snap()
+    s["meta"]["ts"] = now - (40 - i) * 600
+    s["network"]["slot_time_avg_30m"] = 0.4000 + (i % 3) * 0.0001
+    st4.save(s)
+wobble = base_snap(network={"slot_time_avg_30m": 0.3992})      # 0.2% below
+wobble["meta"]["ts"] = now
+st4.save(wobble)
+a = anomaly.detect(wobble, st4)
+check("0.2% wobble on a near-constant series does NOT alert",
+      "slot_time" not in metrics(a), f"got {metrics(a)}")
+
+# Too little history is not a baseline, however odd the reading looks.
+st5 = fresh_store()
+for i in range(4):
+    s = base_snap()
+    s["meta"]["ts"] = now - (4 - i) * 600
+    st5.save(s)
+odd = base_snap(network={"tps_avg_30m": 3600.0})
+odd["meta"]["ts"] = now
+st5.save(odd)
+a = anomaly.detect(odd, st5)
+check("4 samples is too few to raise a statistical alert",
+      "tps" not in metrics(a), f"got {metrics(a)}")
+
+# The guards must not muzzle real events: a large move on a well-established
+# baseline still has to fire.
+st6 = fresh_store()
+for i in range(40):
+    s = base_snap()
+    s["meta"]["ts"] = now - (40 - i) * 600
+    s["network"]["tps_avg_30m"] = 4000 + (i % 7) * 50
+    st6.save(s)
+real = base_snap(network={"tps_avg_30m": 1200.0})
+real["meta"]["ts"] = now
+st6.save(real)
+a = anomaly.detect(real, st6)
+check("a genuine 70% collapse still fires", "tps" in metrics(a), f"got {metrics(a)}")
+
 print("\n=== baseline hygiene ===")
 st3 = fresh_store()
 for i in range(10):

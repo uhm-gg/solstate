@@ -5,6 +5,7 @@ import concurrent.futures as cf
 
 from solstate.sources.rpc import SolanaRpc
 from solstate.sources import offchain
+from solstate.sources import news as news_src
 
 VERSION = "1.0.0"
 
@@ -48,8 +49,9 @@ def collect(rpc_endpoints=None, top_validators=20, top_protocols=15):
         "network": lambda: rpc.network(),
         "validators": lambda: rpc.validators(top_validators),
         "supply": lambda: rpc.supply(),
+        "news": lambda: news_src.news(8),
     }
-    with cf.ThreadPoolExecutor(max_workers=4) as ex:
+    with cf.ThreadPoolExecutor(max_workers=5) as ex:
         futs = [ex.submit(guard, k, f) for k, f in jobs.items()]
         offf = ex.submit(offchain.collect_all)
         for fu in futs:
@@ -71,7 +73,7 @@ def collect(rpc_endpoints=None, top_validators=20, top_protocols=15):
         "rpc_endpoint": rpc.last_used,
         "collect_seconds": round(time.time() - t0, 2),
         "errors": errors,
-        "sources": ["Solana JSON-RPC", "DefiLlama", "CoinGecko"],
+        "sources": ["Solana JSON-RPC", "DefiLlama", "CoinGecko", "solana.com RSS"],
     }
     out["derived"] = derive(out)
     return out
