@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+out/history.db
+out/history.db-wal
+out/history.db-shm
+.venv/
+.DS_Store

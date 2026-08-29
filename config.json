@@ -1,0 +1,24 @@
+{
+  "interval_seconds": 600,
+  "rpc_endpoints": [
+    "https://api.mainnet-beta.solana.com",
+    "https://solana-rpc.publicnode.com"
+  ],
+  "top_validators": 20,
+  "top_protocols": 15,
+  "output_dir": "out",
+  "history_db": "out/history.db",
+  "html_auto_refresh": true,
+  "rules": {
+    "tps_drop_pct": 40.0,
+    "tps_spike_pct": 80.0,
+    "slot_time_warn_s": 0.65,
+    "slot_time_crit_s": 0.90,
+    "delinquent_pct_warn": 5.0,
+    "delinquent_pct_crit": 10.0,
+    "tvl_move_pct": 10.0,
+    "price_move_pct": 10.0,
+    "stablecoin_move_pct": 5.0,
+    "zscore": 3.0
+  }
+}

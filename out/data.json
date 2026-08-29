@@ -1,0 +1,1506 @@
+{
+  "network": {
+    "health": "ok",
+    "version": "4.2.1",
+    "feature_set": 565236538,
+    "endpoint": "https://api.mainnet-beta.solana.com",
+    "slot": 442708136,
+    "block_height": 420755970,
+    "epoch": 1024,
+    "slot_index": 340136,
+    "slots_in_epoch": 432000,
+    "epoch_progress_pct": 78.73518518518519,
+    "epoch_eta_seconds": 29086.226912928763,
+    "transaction_count": 543213128895,
+    "tps": 3888.95,
+    "tps_nonvote": 1724.7666666666667,
+    "tps_avg_30m": 3924.6955555555555,
+    "tps_nonvote_avg_30m": 1756.6755555555555,
+    "slot_time_s": 0.31746031746031744,
+    "slot_time_avg_30m": 0.316622691292876,
+    "vote_share_pct": 55.240463096075956,
+    "samples": [
+      {
+        "slot": 442708151,
+        "tps": 3888.95,
+        "tps_nonvote": 1724.7666666666667,
+        "slot_time": 0.31746031746031744
+      },
+      {
+        "slot": 442707962,
+        "tps": 3942.25,
+        "tps_nonvote": 1767.3166666666666,
+        "slot_time": 0.3157894736842105
+      },
+      {
+        "slot": 442707772,
+        "tps": 3595.9166666666665,
+        "tps_nonvote": 1411.1166666666666,
+        "slot_time": 0.31413612565445026
+      },
+      {
+        "slot": 442707581,
+        "tps": 3563.633333333333,
+        "tps_nonvote": 1337.7833333333333,
+        "slot_time": 0.3076923076923077
+      },
+      {
+        "slot": 442707386,
+        "tps": 4010.266666666667,
+        "tps_nonvote": 1834.9,
+        "slot_time": 0.3157894736842105
+      },
+      {
+        "slot": 442707196,
+        "tps": 4057.0333333333333,
+        "tps_nonvote": 1894.45,
+        "slot_time": 0.31746031746031744
+      },
+      {
+        "slot": 442707007,
+        "tps": 3914.3,
+        "tps_nonvote": 1799.0666666666666,
+        "slot_time": 0.32432432432432434
+      },
+      {
+        "slot": 442706822,
+        "tps": 4029.9166666666665,
+        "tps_nonvote": 1854.5833333333333,
+        "slot_time": 0.3157894736842105
+      },
+      {
+        "slot": 442706632,
+        "tps": 4151.1,
+        "tps_nonvote": 1930.0333333333333,
+        "slot_time": 0.30927835051546393
+      },
+      {
+        "slot": 442706438,
+        "tps": 3794.0666666666666,
+        "tps_nonvote": 1597.4,
+        "slot_time": 0.3125
+      },
+      {
+        "slot": 442706246,
+        "tps": 3645.6,
+        "tps_nonvote": 1471.45,
+        "slot_time": 0.31746031746031744
+      },
+      {
+        "slot": 442706057,
+        "tps": 3682.25,
+        "tps_nonvote": 1505.2166666666667,
+        "slot_time": 0.31413612565445026
+      },
+      {
+        "slot": 442705866,
+        "tps": 4189.283333333334,
+        "tps_nonvote": 1999.8666666666666,
+        "slot_time": 0.31413612565445026
+      },
+      {
+        "slot": 442705675,
+        "tps": 4015.75,
+        "tps_nonvote": 1889.3666666666666,
+        "slot_time": 0.3225806451612903
+      },
+      {
+        "slot": 442705489,
+        "tps": 3905.85,
+        "tps_nonvote": 1704.5833333333333,
+        "slot_time": 0.31088082901554404
+      },
+      {
+        "slot": 442705296,
+        "tps": 3727.733333333333,
+        "tps_nonvote": 1565.7666666666667,
+        "slot_time": 0.31746031746031744
+      },
+      {
+        "slot": 442705107,
+        "tps": 4234.583333333333,
+        "tps_nonvote": 2033.85,
+        "slot_time": 0.3125
+      },
+      {
+        "slot": 442704915,
+        "tps": 3661.05,
+        "tps_nonvote": 1493.0833333333333,
+        "slot_time": 0.31413612565445026
+      },
+      {
+        "slot": 442704724,
+        "tps": 3970.35,
+        "tps_nonvote": 1820.3833333333334,
+        "slot_time": 0.32085561497326204
+      },
+      {
+        "slot": 442704537,
+        "tps": 4277.833333333333,
+        "tps_nonvote": 2126.1833333333334,
+        "slot_time": 0.3191489361702128
+      },
+      {
+        "slot": 442704349,
+        "tps": 4240.416666666667,
+        "tps_nonvote": 2062.0,
+        "slot_time": 0.3157894736842105
+      },
+      {
+        "slot": 442704159,
+        "tps": 3699.6,
+        "tps_nonvote": 1552.5166666666667,
+        "slot_time": 0.3191489361702128
+      },
+      {
+        "slot": 442703971,
+        "tps": 3633.1666666666665,
+        "tps_nonvote": 1492.4666666666667,
+        "slot_time": 0.32085561497326204
+      },
+      {
+        "slot": 442703784,
+        "tps": 4125.616666666667,
+        "tps_nonvote": 1969.2,
+        "slot_time": 0.31746031746031744
+      },
+      {
+        "slot": 442703595,
+        "tps": 3727.2166666666667,
+        "tps_nonvote": 1529.9,
+        "slot_time": 0.3125
+      },
+      {
+        "slot": 442703403,
+        "tps": 3861.0333333333333,
+        "tps_nonvote": 1699.6166666666666,
+        "slot_time": 0.31746031746031744
+      },
+      {
+        "slot": 442703214,
+        "tps": 3772.983333333333,
+        "tps_nonvote": 1646.0333333333333,
+        "slot_time": 0.3225806451612903
+      },
+      {
+        "slot": 442703028,
+        "tps": 4405.683333333333,
+        "tps_nonvote": 2205.266666666667,
+        "slot_time": 0.31088082901554404
+      },
+      {
+        "slot": 442702835,
+        "tps": 4120.966666666666,
+        "tps_nonvote": 1989.7,
+        "slot_time": 0.32432432432432434
+      },
+      {
+        "slot": 442702650,
+        "tps": 3896.4666666666667,
+        "tps_nonvote": 1792.4,
+        "slot_time": 0.32608695652173914
+      }
+    ],
+    "collect_ms": 490
+  },
+  "validators": {
+    "active": 689,
+    "delinquent": 8,
+    "total": 697,
+    "delinquent_pct": 1.1477761836441895,
+    "total_stake_sol": 436134289.13962936,
+    "delinquent_stake_sol": 18164.693816539,
+    "nakamoto_coefficient": 18,
+    "superminority": 41,
+    "top1_share_pct": 3.8960099440510954,
+    "top10_share_pct": 24.150453473677807,
+    "top50_share_pct": 55.248528994871684,
+    "zero_commission_validators": 248,
+    "median_commission": 5,
+    "top_validators": [
+      {
+        "vote_pubkey": "CcaHc2L43ZWjwCHART3oZoJvHLAe9hzT2DJNUpBzoTN1",
+        "node_pubkey": "Fd7btgySsrjuo25CJCj7oE7VPMyezDhnx7pZkj2v69Nk",
+        "stake_sol": 16991835.274296515,
+        "share_pct": 3.8960099440510954,
+        "commission": 7,
+        "epoch_credits": 2471957000
+      },
+      {
+        "vote_pubkey": "he1iusunGwqrNtafDtLdhsUQDFvo13z9sUa36PauBtk",
+        "node_pubkey": "HEL1USMZKAL2odpNBj2oCjffnFGaYwmbGmyewGv1e2TU",
+        "stake_sol": 16035736.885123331,
+        "share_pct": 3.6767888433531204,
+        "commission": 0,
+        "epoch_credits": 2255949210
+      },
+      {
+        "vote_pubkey": "3N7s9zXMZ4QqvHQR15t5GNHyqc89KduzMP7423eWiD5g",
+        "node_pubkey": "DRpbCBMxVnDK7maPM5tGv6MvB3v1sRMC86PZ8okm21hy",
+        "stake_sol": 12393242.269716453,
+        "share_pct": 2.841611535328911,
+        "commission": 0,
+        "epoch_credits": 2386734665
+      },
+      {
+        "vote_pubkey": "CatzoSMUkTRidT5DwBxAC2pEtnwMBTpkCepHkFgZDiqb",
+        "node_pubkey": "JUPiTERrZqgf1jUyR7dSkhMx4Kn2qJyekWsg3LT1h4b",
+        "stake_sol": 11460006.576293709,
+        "share_pct": 2.6276325576007995,
+        "commission": 5,
+        "epoch_credits": 2258349960
+      },
+      {
+        "vote_pubkey": "26pV97Ce83ZQ6Kz9XT4td8tdoUFPTng8Fb8gPyc53dJx",
+        "node_pubkey": "C8Bey3LKVJHVqN6xPTeW8WJfUgFQAeGNBpT4Rp99JP1k",
+        "stake_sol": 9292131.093390668,
+        "share_pct": 2.1305665077885614,
+        "commission": 7,
+        "epoch_credits": 2377018855
+      },
+      {
+        "vote_pubkey": "8GbwASqdpw4dVcwbWUxbHXMrjyQx2aKkoBR5H1GJF8iD",
+        "node_pubkey": "E1r4Psq84tHfQ6aPTvvDka4U3u8zPVD7gEUrH25RdxHL",
+        "stake_sol": 9081212.541606417,
+        "share_pct": 2.08220558844871,
+        "commission": 0,
+        "epoch_credits": 1074792841
+      },
+      {
+        "vote_pubkey": "51JBzSTU5rAM8gLAVQKgp4WoZerQcSqWC7BitBzgUNAm",
+        "node_pubkey": "CAo1dCGYrB6NhHh5xb1cGjUiu86iyCfMTENxgHumSve4",
+        "stake_sol": 9001203.779104479,
+        "share_pct": 2.0638606051501545,
+        "commission": 10,
+        "epoch_credits": 2471646927
+      },
+      {
+        "vote_pubkey": "CvSb7wdQAFpHuSpTYTJnX5SYH4hCfQ9VuGnqrKaKwycB",
+        "node_pubkey": "9eGrDohdNTAo61DRHyfMuqKWXqYnA3i254Wiszxe8FoY",
+        "stake_sol": 7294487.366410007,
+        "share_pct": 1.6725324167471411,
+        "commission": 5,
+        "epoch_credits": 2278328158
+      },
+      {
+        "vote_pubkey": "9QU2QSxhb24FUX3Tu2FpczXjpK3VYrvRudywSZaM29mF",
+        "node_pubkey": "EvnRmnMrd69kFdbLMxWkTn1icZ7DCceRhvmb2SJXqDo4",
+        "stake_sol": 7192557.266187856,
+        "share_pct": 1.6491611518041276,
+        "commission": 7,
+        "epoch_credits": 2475528654
+      },
+      {
+        "vote_pubkey": "DumiCKHVqoCQKD8roLApzR5Fit8qGV5fVQsJV9sTZk4a",
+        "node_pubkey": "Awes4Tr6TX8JDzEhCZY2QVNimT6iD1zWHzf1vNyGvpLM",
+        "stake_sol": 6585995.529292213,
+        "share_pct": 1.5100843234051913,
+        "commission": 0,
+        "epoch_credits": 2470422266
+      },
+      {
+        "vote_pubkey": "HZKopZYvv8v6un2H6KUNVQCnK5zM9emKKezvqhTBSpEc",
+        "node_pubkey": "9jxgosAfHgHzwnxsHw4RAZYaLVokMbnYtmiZBreynGFP",
+        "stake_sol": 6122616.97803968,
+        "share_pct": 1.4038375634527351,
+        "commission": 100,
+        "epoch_credits": 2329398701
+      },
+      {
+        "vote_pubkey": "3JD3jMmnR6g88qff2WZ3cMHJRjJMUk9yVZtmYTYeFrXf",
+        "node_pubkey": "JD549HsbJHeEKKUrKgg4Fj2iyv2RGjsV7NTZjZUrHybB",
+        "stake_sol": 6099132.874017473,
+        "share_pct": 1.3984529595344022,
+        "commission": 0,
+        "epoch_credits": 1220531573
+      },
+      {
+        "vote_pubkey": "DdCNGDpP7qMgoAy6paFzhhak2EeyCZcgjH7ak5u5v28m",
+        "node_pubkey": "5pPRHniefFjkiaArbGX3Y8NUysJmQ9tMZg3FrFGwHzSm",
+        "stake_sol": 5942389.20136043,
+        "share_pct": 1.362513645300189,
+        "commission": 5,
+        "epoch_credits": 2392714829
+      },
+      {
+        "vote_pubkey": "GHViLgbrJdZDPb6sphRbeuPNM9cmjsFuGWzrTF1sKF5n",
+        "node_pubkey": "5Cchr1XGEg7dbBXByV5NY2ad8jfxAM7HA3x8D56rq9Ux",
+        "stake_sol": 5597980.473421255,
+        "share_pct": 1.283545140297155,
+        "commission": 100,
+        "epoch_credits": 2300054985
+      },
+      {
+        "vote_pubkey": "FKsC411dik9ktS6xPADxs4Fk2SCENvAiuccQHLAPndvk",
+        "node_pubkey": "GnC339vkyXRm1jRX69dt9mapPPu2LbzXfSDoxc91qta6",
+        "stake_sol": 4822303.9785002,
+        "share_pct": 1.1056924664220402,
+        "commission": 7,
+        "epoch_credits": 2473857378
+      },
+      {
+        "vote_pubkey": "HimWQUK61d9wxhw7EYu9jUje7xQiDs4jKexaTSvuCmXE",
+        "node_pubkey": "9rkJMARqK6VBkcxGfKBAwnA44gPAfGxPbPsfsggFNDSQ",
+        "stake_sol": 4668120.872672609,
+        "share_pct": 1.070340257327967,
+        "commission": 8,
+        "epoch_credits": 2228733227
+      },
+      {
+        "vote_pubkey": "3ZYJxzCeweSoh2Jj7oCgencFs9y27iKmXJeqYapje1cj",
+        "node_pubkey": "EkvdKhULbMFqjKBKotAzGi3kwMvMpYNDKJXXQQmi6C1f",
+        "stake_sol": 4082806.12557665,
+        "share_pct": 0.9361350912423972,
+        "commission": 100,
+        "epoch_credits": 2346246661
+      },
+      {
+        "vote_pubkey": "G9x1mqewTeVnXLmv3FamYD5tq1AdS395RHH3MLQPj6TY",
+        "node_pubkey": "BtsmiEEvnSuUnKxqXj2PZRYpPJAc7C34mGz8gtJ1DAaH",
+        "stake_sol": 4035950.191125496,
+        "share_pct": 0.9253916263009941,
+        "commission": 100,
+        "epoch_credits": 2346319488
+      },
+      {
+        "vote_pubkey": "AZoCYB4VgoM9DR9f1ZFcBn8xPSbtbqoxZnKJR7tkvEoX",
+        "node_pubkey": "FBKFWadXZJahGtFitAsBvbqh5968gLY7dMBBJUoUjeNi",
+        "stake_sol": 4009786.926839266,
+        "share_pct": 0.9193927252886838,
+        "commission": 100,
+        "epoch_credits": 2366556591
+      },
+      {
+        "vote_pubkey": "EcEowA4GKDsdVBF9PNAZa6c9M4WgYG8y4GnpZSUaqioS",
+        "node_pubkey": "5ZqveVffQPiUbkjBg4KD9kib1MKHLqiFno4ke9jSq9qk",
+        "stake_sol": 3964900.892944239,
+        "share_pct": 0.9091009332849928,
+        "commission": 100,
+        "epoch_credits": 1521477861
+      }
+    ],
+    "delinquent_validators": [
+      {
+        "vote_pubkey": "gangtRyGPTvYWb8K3xS2feJQaCks4iJ7rytFUPtVqSY",
+        "stake_sol": 15324.881834238
+      },
+      {
+        "vote_pubkey": "4GEEKSwzc242QKF1uzzodpFaxb4GShQEZhkZfeXd27Vi",
+        "stake_sol": 1344.181530724
+      },
+      {
+        "vote_pubkey": "ChaosDKeBjU22B4nnvYWXyTRPuWTzJBR4m3QPfBw6Tta",
+        "stake_sol": 827.709928714
+      },
+      {
+        "vote_pubkey": "25quQGzrtcU224Kk7G5YDJ9oJXgYsiur8pZ7pAnCMhhV",
+        "stake_sol": 662.857063553
+      },
+      {
+        "vote_pubkey": "8Ug1zHMVDHAra2TaMFkUa6oWyLYoEhWGzcxL81yA5zmy",
+        "stake_sol": 1.99771712
+      },
+      {
+        "vote_pubkey": "34kE8AGJazhgrsovREiB2Uru1CuhN4gCznNAmVUxB9AB",
+        "stake_sol": 1.99771712
+      },
+      {
+        "vote_pubkey": "97zQpQHRnkxvgCkHg3yJhrWVbm8224v39QMCjjcxLkUL",
+        "stake_sol": 1.06600272
+      },
+      {
+        "vote_pubkey": "93jNtLuu5MF3Me4MGidwQFq8Pg7iVWiRHioXm3aYhsv6",
+        "stake_sol": 0.00202235
+      }
+    ],
+    "collect_ms": 306
+  },
+  "supply": {
+    "total_sol": 633078773.40153,
+    "circulating_sol": 584161233.2705152,
+    "non_circulating_sol": 48917540.13101474,
+    "circulating_pct": 92.27307213789827,
+    "inflation_total_pct": 3.6737129708806435,
+    "inflation_validator_pct": 3.6737129708806435,
+    "inflation_epoch": 1024
+  },
+  "tvl": {
+    "tvl_usd": 5902220139,
+    "change_1d_pct": -1.8419747435785796,
+    "change_7d_pct": 6.309869580195149,
+    "change_30d_pct": 23.031543199560847,
+    "ath_usd": 13238348377,
+    "history": [
+      {
+        "date": 1780272000,
+        "tvl": 5400842678
+      },
+      {
+        "date": 1780358400,
+        "tvl": 5299713435
+      },
+      {
+        "date": 1780444800,
+        "tvl": 5032148178
+      },
+      {
+        "date": 1780531200,
+        "tvl": 5001108330
+      },
+      {
+        "date": 1780617600,
+        "tvl": 4945372383
+      },
+      {
+        "date": 1780704000,
+        "tvl": 4725940957
+      },
+      {
+        "date": 1780790400,
+        "tvl": 4713797179
+      },
+      {
+        "date": 1780876800,
+        "tvl": 4938746241
+      },
+      {
+        "date": 1780963200,
+        "tvl": 4891072853
+      },
+      {
+        "date": 1781049600,
+        "tvl": 4795598574
+      },
+      {
+        "date": 1781136000,
+        "tvl": 4450273497
+      },
+      {
+        "date": 1781222400,
+        "tvl": 4603183963
+      },
+      {
+        "date": 1781308800,
+        "tvl": 4712412920
+      },
+      {
+        "date": 1781395200,
+        "tvl": 4782091132
+      },
+      {
+        "date": 1781481600,
+        "tvl": 4896400022
+      },
+      {
+        "date": 1781568000,
+        "tvl": 4928429806
+      },
+      {
+        "date": 1781654400,
+        "tvl": 4938436909
+      },
+      {
+        "date": 1781740800,
+        "tvl": 4820913336
+      },
+      {
+        "date": 1781827200,
+        "tvl": 4790601234
+      },
+      {
+        "date": 1781913600,
+        "tvl": 4785036991
+      },
+      {
+        "date": 1782000000,
+        "tvl": 4921745337
+      },
+      {
+        "date": 1782086400,
+        "tvl": 4922406565
+      },
+      {
+        "date": 1782172800,
+        "tvl": 4854293604
+      },
+      {
+        "date": 1782259200,
+        "tvl": 4802332429
+      },
+      {
+        "date": 1782345600,
+        "tvl": 4720009605
+      },
+      {
+        "date": 1782432000,
+        "tvl": 4669846588
+      },
+      {
+        "date": 1782518400,
+        "tvl": 4838498187
+      },
+      {
+        "date": 1782604800,
+        "tvl": 4764775426
+      },
+      {
+        "date": 1782691200,
+        "tvl": 4828024459
+      },
+      {
+        "date": 1782777600,
+        "tvl": 4916050730
+      },
+      {
+        "date": 1782864000,
+        "tvl": 4791925316
+      },
+      {
+        "date": 1782950400,
+        "tvl": 4928120723
+      },
+      {
+        "date": 1783036800,
+        "tvl": 5058374873
+      },
+      {
+        "date": 1783123200,
+        "tvl": 5136268599
+      },
+      {
+        "date": 1783209600,
+        "tvl": 5131551358
+      },
+      {
+        "date": 1783296000,
+        "tvl": 5124243309
+      },
+      {
+        "date": 1783382400,
+        "tvl": 5154304333
+      },
+      {
+        "date": 1783468800,
+        "tvl": 5022927835
+      },
+      {
+        "date": 1783555200,
+        "tvl": 4955720332
+      },
+      {
+        "date": 1783641600,
+        "tvl": 4974556460
+      },
+      {
+        "date": 1783728000,
+        "tvl": 4946117757
+      },
+      {
+        "date": 1783814400,
+        "tvl": 4861370972
+      },
+      {
+        "date": 1783900800,
+        "tvl": 4860991286
+      },
+      {
+        "date": 1783987200,
+        "tvl": 4816103530
+      },
+      {
+        "date": 1784073600,
+        "tvl": 4928010539
+      },
+      {
+        "date": 1784160000,
+        "tvl": 4934490239
+      },
+      {
+        "date": 1784246400,
+        "tvl": 4854260936
+      },
+      {
+        "date": 1784332800,
+        "tvl": 4832019773
+      },
+      {
+        "date": 1784419200,
+        "tvl": 4876741454
+      },
+      {
+        "date": 1784505600,
+        "tvl": 4879701617
+      },
+      {
+        "date": 1784592000,
+        "tvl": 4982114728
+      },
+      {
+        "date": 1784678400,
+        "tvl": 5001937565
+      },
+      {
+        "date": 1784764800,
+        "tvl": 4970169058
+      },
+      {
+        "date": 1784851200,
+        "tvl": 4926520028
+      },
+      {
+        "date": 1784937600,
+        "tvl": 4791607647
+      },
+      {
+        "date": 1785024000,
+        "tvl": 4842120784
+      },
+      {
+        "date": 1785110400,
+        "tvl": 4921326728
+      },
+      {
+        "date": 1785196800,
+        "tvl": 4817990142
+      },
+      {
+        "date": 1785283200,
+        "tvl": 4793588603
+      },
+      {
+        "date": 1785369600,
+        "tvl": 4797322691
+      },
+      {
+        "date": 1785456000,
+        "tvl": 4828334694
+      },
+      {
+        "date": 1785542400,
+        "tvl": 4751416128
+      },
+      {
+        "date": 1785628800,
+        "tvl": 4719238086
+      },
+      {
+        "date": 1785715200,
+        "tvl": 4742273413
+      },
+      {
+        "date": 1785801600,
+        "tvl": 4764777445
+      },
+      {
+        "date": 1785888000,
+        "tvl": 4805262930
+      },
+      {
+        "date": 1785974400,
+        "tvl": 4805431342
+      },
+      {
+        "date": 1786060800,
+        "tvl": 4722472968
+      },
+      {
+        "date": 1786147200,
+        "tvl": 4749100555
+      },
+      {
+        "date": 1786233600,
+        "tvl": 4808300364
+      },
+      {
+        "date": 1786320000,
+        "tvl": 4854015088
+      },
+      {
+        "date": 1786406400,
+        "tvl": 4839226649
+      },
+      {
+        "date": 1786492800,
+        "tvl": 4863310139
+      },
+      {
+        "date": 1786579200,
+        "tvl": 4823175760
+      },
+      {
+        "date": 1786665600,
+        "tvl": 4837139573
+      },
+      {
+        "date": 1786752000,
+        "tvl": 4816712953
+      },
+      {
+        "date": 1786838400,
+        "tvl": 4808833924
+      },
+      {
+        "date": 1786924800,
+        "tvl": 4777052173
+      },
+      {
+        "date": 1787011200,
+        "tvl": 4849717373
+      },
+      {
+        "date": 1787097600,
+        "tvl": 4896825844
+      },
+      {
+        "date": 1787184000,
+        "tvl": 5226107459
+      },
+      {
+        "date": 1787270400,
+        "tvl": 5332104911
+      },
+      {
+        "date": 1787356800,
+        "tvl": 5551902342
+      },
+      {
+        "date": 1787443200,
+        "tvl": 5557657858
+      },
+      {
+        "date": 1787529600,
+        "tvl": 5561528475
+      },
+      {
+        "date": 1787616000,
+        "tvl": 5737289299
+      },
+      {
+        "date": 1787702400,
+        "tvl": 5606490789
+      },
+      {
+        "date": 1787788800,
+        "tvl": 5773839594
+      },
+      {
+        "date": 1787875200,
+        "tvl": 6012977669
+      },
+      {
+        "date": 1787961600,
+        "tvl": 5902220139
+      }
+    ]
+  },
+  "protocols": {
+    "count": 147,
+    "top": [
+      {
+        "name": "Sanctum Validator LSTs",
+        "category": "Liquid Staking",
+        "tvl_usd": 1602434324.526932,
+        "change_1d_pct": 1.0668418375446436,
+        "change_7d_pct": 13.340945607873095,
+        "url": "https://www.sanctum.so"
+      },
+      {
+        "name": "Kamino Lend",
+        "category": "Lending",
+        "tvl_usd": 1252926192.2396016,
+        "change_1d_pct": 2.366282041406947,
+        "change_7d_pct": 5.762759772547497,
+        "url": "https://kamino.com/"
+      },
+      {
+        "name": "Raydium AMM",
+        "category": "Dexs",
+        "tvl_usd": 1130700995.0324717,
+        "change_1d_pct": -0.9223530740265318,
+        "change_7d_pct": 9.878705597158444,
+        "url": "https://raydium.io"
+      },
+      {
+        "name": "Jupiter Lend",
+        "category": "Lending",
+        "tvl_usd": 1098146396.2934268,
+        "change_1d_pct": 1.2402681926170231,
+        "change_7d_pct": 4.495681338877745,
+        "url": "https://jup.ag/?ref=f6y1ryr2snn3"
+      },
+      {
+        "name": "Binance Staked SOL",
+        "category": "Liquid Staking",
+        "tvl_usd": 1085726891.7474678,
+        "change_1d_pct": 1.5693441726079413,
+        "change_7d_pct": 14.029545118550232,
+        "url": "https://www.binance.com/en/solana-staking"
+      },
+      {
+        "name": "Jito Liquid Staking",
+        "category": "Liquid Staking",
+        "tvl_usd": 1059883710.5899216,
+        "change_1d_pct": 1.5266184894525452,
+        "change_7d_pct": 11.978419841677095,
+        "url": "https://jito.network"
+      },
+      {
+        "name": "BlackRock BUIDL",
+        "category": "RWA",
+        "tvl_usd": 886536739.88,
+        "change_1d_pct": 2.842170943040401e-14,
+        "change_7d_pct": 6.052853926758289,
+        "url": "https://securitize.io/"
+      },
+      {
+        "name": "Jupiter Perpetual Exchange",
+        "category": "Derivatives",
+        "tvl_usd": 772823256.0485643,
+        "change_1d_pct": 1.2022369309247125,
+        "change_7d_pct": 4.232470700864724,
+        "url": "https://jup.ag/?ref=f6y1ryr2snn3"
+      },
+      {
+        "name": "Jupiter Staked SOL",
+        "category": "Liquid Staking",
+        "tvl_usd": 547396787.3063977,
+        "change_1d_pct": 1.9941903056567583,
+        "change_7d_pct": 12.14006610754754,
+        "url": "https://jup.ag/?ref=f6y1ryr2snn3"
+      },
+      {
+        "name": "xStocks",
+        "category": "RWA",
+        "tvl_usd": 433457362.04114664,
+        "change_1d_pct": 0.5235913592965176,
+        "change_7d_pct": 3.7044917332860194,
+        "url": "https://defi.xstocks.fi"
+      },
+      {
+        "name": "Marinade Native",
+        "category": "Staking Pool",
+        "tvl_usd": 430431535.16357535,
+        "change_1d_pct": 2.2047462216178104,
+        "change_7d_pct": 35.16749437780618,
+        "url": "https://app.marinade.finance/"
+      },
+      {
+        "name": "Sentora",
+        "category": "Risk Curators",
+        "tvl_usd": 361075171.10354924,
+        "change_1d_pct": -0.08657701189763145,
+        "change_7d_pct": 0.23192091281441662,
+        "url": "https://sentora.com/"
+      },
+      {
+        "name": "PumpSwap",
+        "category": "Dexs",
+        "tvl_usd": 355977219.48043907,
+        "change_1d_pct": 1.3315859533037866,
+        "change_7d_pct": 12.25391895473851,
+        "url": "https://swap.pump.fun"
+      },
+      {
+        "name": "Drift Staked SOL",
+        "category": "Liquid Staking",
+        "tvl_usd": 296421102.32329977,
+        "change_1d_pct": 1.5888283610385088,
+        "change_7d_pct": 11.814726308527113,
+        "url": "https://app.drift.trade"
+      },
+      {
+        "name": "OnRe",
+        "category": "RWA",
+        "tvl_usd": 284649102.8103033,
+        "change_1d_pct": 0.05061979434375985,
+        "change_7d_pct": 4.126578114228053,
+        "url": "https://app.onre.finance"
+      }
+    ],
+    "by_category": [
+      {
+        "category": "Liquid Staking",
+        "tvl_usd": 6265948588.316443
+      },
+      {
+        "category": "Lending",
+        "tvl_usd": 2632316716.8314424
+      },
+      {
+        "category": "Dexs",
+        "tvl_usd": 2369421294.8691463
+      },
+      {
+        "category": "RWA",
+        "tvl_usd": 2071120500.9999223
+      },
+      {
+        "category": "Derivatives",
+        "tvl_usd": 858735454.4471921
+      },
+      {
+        "category": "Staking Pool",
+        "tvl_usd": 658380196.4053506
+      },
+      {
+        "category": "Risk Curators",
+        "tvl_usd": 467992686.42481714
+      },
+      {
+        "category": "Yield",
+        "tvl_usd": 449870877.4678276
+      },
+      {
+        "category": "Bridge",
+        "tvl_usd": 328381180.7006697
+      },
+      {
+        "category": "Basis Trading",
+        "tvl_usd": 328374094.76470166
+      }
+    ],
+    "excluded_cex_usd": 12237305000.729795
+  },
+  "stablecoins": {
+    "total_usd": 15890430041.97498,
+    "change_1d_pct": -2.606079941532945,
+    "change_7d_pct": -2.881456148665674,
+    "change_30d_pct": -2.455563720175768,
+    "history": [
+      {
+        "date": 1780272000,
+        "total": 15165719128
+      },
+      {
+        "date": 1780358400,
+        "total": 15363333850
+      },
+      {
+        "date": 1780444800,
+        "total": 15882098856
+      },
+      {
+        "date": 1780531200,
+        "total": 15594122711
+      },
+      {
+        "date": 1780617600,
+        "total": 15250812226
+      },
+      {
+        "date": 1780704000,
+        "total": 15404268856
+      },
+      {
+        "date": 1780790400,
+        "total": 15541310192
+      },
+      {
+        "date": 1780876800,
+        "total": 15849903362
+      },
+      {
+        "date": 1780963200,
+        "total": 15893235192
+      },
+      {
+        "date": 1781049600,
+        "total": 15630886780
+      },
+      {
+        "date": 1781136000,
+        "total": 15708063126
+      },
+      {
+        "date": 1781222400,
+        "total": 15769736200
+      },
+      {
+        "date": 1781308800,
+        "total": 15569777548
+      },
+      {
+        "date": 1781395200,
+        "total": 15618547094
+      },
+      {
+        "date": 1781481600,
+        "total": 15650865740
+      },
+      {
+        "date": 1781568000,
+        "total": 15476740641
+      },
+      {
+        "date": 1781654400,
+        "total": 15301652101
+      },
+      {
+        "date": 1781740800,
+        "total": 15304506147
+      },
+      {
+        "date": 1781827200,
+        "total": 15610111545
+      },
+      {
+        "date": 1781913600,
+        "total": 15678232464
+      },
+      {
+        "date": 1782000000,
+        "total": 15729437403
+      },
+      {
+        "date": 1782086400,
+        "total": 15680269500
+      },
+      {
+        "date": 1782172800,
+        "total": 15727809524
+      },
+      {
+        "date": 1782259200,
+        "total": 15740477767
+      },
+      {
+        "date": 1782345600,
+        "total": 15355039947
+      },
+      {
+        "date": 1782432000,
+        "total": 15396494064
+      },
+      {
+        "date": 1782518400,
+        "total": 15542748869
+      },
+      {
+        "date": 1782604800,
+        "total": 15538792718
+      },
+      {
+        "date": 1782691200,
+        "total": 15530329982
+      },
+      {
+        "date": 1782777600,
+        "total": 15565243850
+      },
+      {
+        "date": 1782864000,
+        "total": 15531254440
+      },
+      {
+        "date": 1782950400,
+        "total": 15560603792
+      },
+      {
+        "date": 1783036800,
+        "total": 16068883908
+      },
+      {
+        "date": 1783123200,
+        "total": 15676790393
+      },
+      {
+        "date": 1783209600,
+        "total": 15656140312
+      },
+      {
+        "date": 1783296000,
+        "total": 15713838580
+      },
+      {
+        "date": 1783382400,
+        "total": 15398547585
+      },
+      {
+        "date": 1783468800,
+        "total": 15592081512
+      },
+      {
+        "date": 1783555200,
+        "total": 15384088450
+      },
+      {
+        "date": 1783641600,
+        "total": 15357530969
+      },
+      {
+        "date": 1783728000,
+        "total": 15425037757
+      },
+      {
+        "date": 1783814400,
+        "total": 15472349185
+      },
+      {
+        "date": 1783900800,
+        "total": 15562129691
+      },
+      {
+        "date": 1783987200,
+        "total": 15146020561
+      },
+      {
+        "date": 1784073600,
+        "total": 15060006523
+      },
+      {
+        "date": 1784160000,
+        "total": 14911871099
+      },
+      {
+        "date": 1784246400,
+        "total": 15330020453
+      },
+      {
+        "date": 1784332800,
+        "total": 15628626207
+      },
+      {
+        "date": 1784419200,
+        "total": 15686805647
+      },
+      {
+        "date": 1784505600,
+        "total": 15711908500
+      },
+      {
+        "date": 1784592000,
+        "total": 15784086851
+      },
+      {
+        "date": 1784678400,
+        "total": 15859603561
+      },
+      {
+        "date": 1784764800,
+        "total": 16852540317
+      },
+      {
+        "date": 1784851200,
+        "total": 16911702789
+      },
+      {
+        "date": 1784937600,
+        "total": 17033111122
+      },
+      {
+        "date": 1785024000,
+        "total": 16956643995
+      },
+      {
+        "date": 1785110400,
+        "total": 16874209981
+      },
+      {
+        "date": 1785196800,
+        "total": 16050966339
+      },
+      {
+        "date": 1785283200,
+        "total": 16227265127
+      },
+      {
+        "date": 1785369600,
+        "total": 16290452483
+      },
+      {
+        "date": 1785456000,
+        "total": 16296562526
+      },
+      {
+        "date": 1785542400,
+        "total": 16291981955
+      },
+      {
+        "date": 1785628800,
+        "total": 16232976624
+      },
+      {
+        "date": 1785715200,
+        "total": 16176345213
+      },
+      {
+        "date": 1785801600,
+        "total": 16359004262
+      },
+      {
+        "date": 1785888000,
+        "total": 16502929837
+      },
+      {
+        "date": 1785974400,
+        "total": 16156153780
+      },
+      {
+        "date": 1786060800,
+        "total": 16207150994
+      },
+      {
+        "date": 1786147200,
+        "total": 16178101834
+      },
+      {
+        "date": 1786233600,
+        "total": 16202054361
+      },
+      {
+        "date": 1786320000,
+        "total": 16254727712
+      },
+      {
+        "date": 1786406400,
+        "total": 16263712565
+      },
+      {
+        "date": 1786492800,
+        "total": 16234558464
+      },
+      {
+        "date": 1786579200,
+        "total": 16015754261
+      },
+      {
+        "date": 1786665600,
+        "total": 16032479437
+      },
+      {
+        "date": 1786752000,
+        "total": 15942237442
+      },
+      {
+        "date": 1786838400,
+        "total": 15932081548
+      },
+      {
+        "date": 1786924800,
+        "total": 15937197871
+      },
+      {
+        "date": 1787011200,
+        "total": 15916287636
+      },
+      {
+        "date": 1787097600,
+        "total": 15948825140
+      },
+      {
+        "date": 1787184000,
+        "total": 16264766358
+      },
+      {
+        "date": 1787270400,
+        "total": 16454593430
+      },
+      {
+        "date": 1787356800,
+        "total": 16361890749
+      },
+      {
+        "date": 1787443200,
+        "total": 16310252922
+      },
+      {
+        "date": 1787529600,
+        "total": 16392450689
+      },
+      {
+        "date": 1787616000,
+        "total": 16357971419
+      },
+      {
+        "date": 1787702400,
+        "total": 16246739838
+      },
+      {
+        "date": 1787788800,
+        "total": 16227675631
+      },
+      {
+        "date": 1787875200,
+        "total": 16315628360
+      },
+      {
+        "date": 1787961600,
+        "total": 16281873586.11
+      }
+    ]
+  },
+  "dex_volume": {
+    "total_24h": 2590586442.2200003,
+    "total_7d": 21244429335.54,
+    "total_30d": 61195260453.88999,
+    "change_1d_pct": -29.99,
+    "change_7d_pct": -28.06,
+    "top": [
+      {
+        "name": "PumpSwap",
+        "total_24h": 576287157
+      },
+      {
+        "name": "BisonFi",
+        "total_24h": 331440938
+      },
+      {
+        "name": "Meteora DLMM",
+        "total_24h": 279394720
+      },
+      {
+        "name": "Orca DEX",
+        "total_24h": 187428210
+      },
+      {
+        "name": "Raydium AMM",
+        "total_24h": 132390410
+      },
+      {
+        "name": "Axiom",
+        "total_24h": 124298931
+      },
+      {
+        "name": "pump.fun",
+        "total_24h": 117622078
+      },
+      {
+        "name": "Scorch",
+        "total_24h": 98827644
+      },
+      {
+        "name": "Manifest Trade",
+        "total_24h": 92481636
+      },
+      {
+        "name": "Tessera V",
+        "total_24h": 69435772
+      }
+    ]
+  },
+  "fees": {
+    "total_24h": 15728868.43,
+    "total_7d": 99708761.62000008,
+    "total_30d": 312579846.9999993,
+    "change_1d_pct": -3.52,
+    "change_7d_pct": 17.92,
+    "top": [
+      {
+        "name": "PumpSwap",
+        "total_24h": 4112126
+      },
+      {
+        "name": "pump.fun",
+        "total_24h": 2162156
+      },
+      {
+        "name": "Axiom",
+        "total_24h": 1854578
+      },
+      {
+        "name": "Solana",
+        "total_24h": 946011
+      },
+      {
+        "name": "fomo Wallet",
+        "total_24h": 814789
+      },
+      {
+        "name": "Meteora DLMM",
+        "total_24h": 621754
+      },
+      {
+        "name": "Jupiter Perpetual Exchange",
+        "total_24h": 498131
+      },
+      {
+        "name": "Sanctum Validator LSTs",
+        "total_24h": 436024
+      },
+      {
+        "name": "pump.fun Mobile App",
+        "total_24h": 315975
+      },
+      {
+        "name": "Phantom Wallet",
+        "total_24h": 285067
+      }
+    ]
+  },
+  "price": {
+    "price_usd": 105.2,
+    "market_cap_usd": 61452176930,
+    "fdv_usd": 66598173160,
+    "volume_24h_usd": 2465431339,
+    "change_24h_pct": 1.53861,
+    "change_7d_pct": 11.44965,
+    "change_30d_pct": 41.35881,
+    "ath_usd": 293.31,
+    "ath_change_pct": -64.13442,
+    "atl_usd": 0.500801,
+    "market_cap_rank": 7,
+    "circulating_supply": 584161249.4935327
+  },
+  "upgrades": [
+    {
+      "name": "Alpenglow",
+      "status": "In development",
+      "summary": "Replaces TowerBFT/Proof-of-History consensus with Votor+Rotor, targeting ~150ms finality instead of ~12.8s.",
+      "impact": "Finality",
+      "reference": "SIMD-0326"
+    },
+    {
+      "name": "SIMD-0525 / fee market",
+      "status": "Proposed",
+      "summary": "Continued refinement of the local fee market and priority-fee handling to reduce contention-driven spikes.",
+      "impact": "Fees",
+      "reference": "SIMD-0525"
+    },
+    {
+      "name": "Firedancer",
+      "status": "Rolling out",
+      "summary": "Jump Crypto's independent validator client, adding client diversity and higher throughput headroom.",
+      "impact": "Throughput / resilience",
+      "reference": "jump-firedancer"
+    },
+    {
+      "name": "Token Extensions (Token-2022)",
+      "status": "Live, adoption growing",
+      "summary": "Confidential transfers, transfer hooks and metadata on the token program, targeted at institutional issuance.",
+      "impact": "Tokenisation",
+      "reference": "spl-token-2022"
+    }
+  ],
+  "meta": {
+    "ts": 1788038709.2507176,
+    "generated_at": "2026-08-29 21:25:09 UTC",
+    "version": "1.0.0",
+    "rpc_endpoint": "https://api.mainnet-beta.solana.com",
+    "collect_seconds": 7.38,
+    "errors": {},
+    "sources": [
+      "Solana JSON-RPC",
+      "DefiLlama",
+      "CoinGecko"
+    ],
+    "snapshots_stored": 3
+  },
+  "derived": {
+    "staked_pct_of_circulating": 74.65991652644689,
+    "staked_usd": 45881327217.48901,
+    "total_supply_usd": 66599886961.84096,
+    "rev_24h_usd": 15728868.43,
+    "rev_annualised_usd": 5741036976.95,
+    "rev_yield_on_stake_pct": 12.512796218243738,
+    "est_daily_transactions": 339093696.0,
+    "est_daily_nonvote_transactions": 151776768.0,
+    "base_fee_per_signature_usd": 0.0005260000000000001,
+    "avg_rev_per_nonvote_tx_usd": 0.10363159419760473,
+    "avg_rev_per_tx_usd": 0.0463850216490017,
+    "dex_volume_to_tvl": 0.4389172855655156,
+    "stablecoin_to_tvl_ratio": 2.6922801365838684,
+    "epoch_eta_human": "8h 4m",
+    "nominal_staking_yield_pct": 4.9205961402050304
+  },
+  "anomalies": []
+}
