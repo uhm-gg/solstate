@@ -1,0 +1,58 @@
+# Refreshes the report and republishes it to GitHub Pages.
+#
+# Needs no secrets: every data source is public and keyless, and there are no
+# dependencies to install, so the job is just "run python".
+name: update-report
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:          # manual trigger
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No `pip install` step: solstate is standard-library only.
+      - name: Generate report
+        run: python run.py
+
+      - name: Verify anomaly detector
+        run: python tests/test_anomaly.py
+
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          cp out/dashboard.html _site/index.html
+          cp out/report.md out/data.json _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
